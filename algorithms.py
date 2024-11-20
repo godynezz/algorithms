@@ -40,3 +40,19 @@ def factorial(x):
         return x * factorial(x-1)
 
 
+def quick_sort(arr):
+
+    if len(arr) <= 1:
+        return arr
+
+    pivot = arr[0]
+    left  = []
+    right = []
+
+    for n in arr[1:]:
+        if n >= pivot:
+            right.append(n)
+        else:
+            left.append(n)
+
+    return quick_sort(left) + [pivot] + quick_sort(right)
