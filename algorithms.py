@@ -1,4 +1,4 @@
-def getsmallest(arr):
+def get_smallest_number(arr):
     small = arr[0]
     index = 0
     for i in range(1,len(arr)):
@@ -8,15 +8,15 @@ def getsmallest(arr):
     return index
 
 
-def sort(arr):
+def selection_sort(arr):
     sorted = []
     for i in range(len(arr)):
-        smallest = getsmallest(arr)
+        smallest = get_smallest_number(arr)
         sorted.append(arr.pop(smallest))
     return sorted
 
 
-def binarysearch(arr,item):
+def binary_search(arr,item):
     low  = 0
     high = len(arr) - 1
     while low <= high:
@@ -33,9 +33,10 @@ def binarysearch(arr,item):
     return None
 
 
-def fat(x):
+def factorial(x):
     if x == 1:
         return 1
     else:
-        return x * fat(x-1)
+        return x * factorial(x-1)
+
 
