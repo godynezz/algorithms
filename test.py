@@ -15,8 +15,7 @@ if one is not None:
 else:
     print("Err ->", one)
 
-
-threebang = algorithms.fat(3)
+threebang = algorithms.factorial(3)
 
 if threebang == 6:
     print("Ok ->",threebang)
