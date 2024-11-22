@@ -66,3 +66,15 @@ if found == expected:
     print("two sum - Ok -> found|expected :", found, "==", expected)
 else:
     print("two sum - Err -> found|expected :", found, "!=", expected)
+
+
+expected = [5, 6]
+arr = [-1, -1, -1, -7, -4, -6, -9,- 4,- 5,- 9,- 2,- 3,- 5,- 7]
+
+found = algorithms.two_sum(arr, -15)
+
+if found == expected:
+    print("two sum - Ok -> found|expected :", found, "==", expected)
+else:
+    print("two sum - Err -> found|expected :", found, "!=", expected)
+

@@ -68,12 +68,12 @@ def quick_sort(arr):
 
     return quick_sort(left) + [pivot] + quick_sort(right)
 
-
+#it works... not well but works
 def two_sum(arr, target):
     for index in range(len(arr)):
 
         num = arr[index]
-        if num > target:
+        if num - target == 0 and target != 0:
             continue
 
         index_b = linear_search(arr, target - num)
