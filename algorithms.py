@@ -1,7 +1,7 @@
 def get_smallest_number(arr):
     small = arr[0]
     index = 0
-    for i in range(1,len(arr)):
+    for i in range(1, len(arr)):
         if arr[i] < small:
             small = arr[i]
             index = i
@@ -16,19 +16,29 @@ def selection_sort(arr):
     return sorted
 
 
-def binary_search(arr,item):
-    low  = 0
+def binary_search(arr, target):
+    low = 0
     high = len(arr) - 1
     while low <= high:
-        mid  = int((low + high)/2)
+        mid = int((low + high) / 2)
         kick = arr[mid]
 
-        if kick == item:
-            return kick
-        elif kick > item:
+        if kick == target:
+            return mid
+        elif kick > target:
             high = mid
         else:
             low = mid
+
+    return None
+
+
+def linear_search(arr, target):
+    index = 0
+    for num in arr:
+        if num == target:
+            return index
+        index += 1
 
     return None
 
@@ -37,7 +47,7 @@ def factorial(x):
     if x == 0 or x == 1:
         return x
     else:
-        return x * factorial(x-1)
+        return x * factorial(x - 1)
 
 
 def quick_sort(arr):
@@ -46,7 +56,7 @@ def quick_sort(arr):
         return arr
 
     pivot = arr[0]
-    left  = []
+    left = []
     right = []
 
     for n in arr[1:]:
@@ -56,3 +66,19 @@ def quick_sort(arr):
             left.append(n)
 
     return quick_sort(left) + [pivot] + quick_sort(right)
+
+
+def two_sum(arr, target):
+    for index in range(len(arr)):
+
+        num = arr[index]
+        if num > target:
+            continue
+
+        index_b = linear_search(arr, target - num)
+
+        if index_b is None:
+            continue
+
+        return [index, index_b]
+    return None
