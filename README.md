@@ -1,4 +1,4 @@
 # algorithms
 ## TODO
-- [] euclidean algorithm
+- [ ] euclidean algorithm
 - [x] quick sort algorithm
