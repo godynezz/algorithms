@@ -43,6 +43,7 @@ def linear_search(arr, target):
     return None
 
 
+
 def factorial(x):
     if x == 0 or x == 1:
         return x
@@ -77,7 +78,7 @@ def two_sum(arr, target):
 
         index_b = linear_search(arr, target - num)
 
-        if index_b is None:
+        if index_b is None or index_b == index:
             continue
 
         return [index, index_b]
